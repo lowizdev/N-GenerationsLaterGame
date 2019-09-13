@@ -5,7 +5,7 @@
 ---
 
 <p align="center">
-![Game Screenshot](screen.png)
+ <img src="screen.png">
 </p>
 
 In this game, you take the role of a creature (and it's descendents), in a world that is all yours to explore! Travel through the platforms and watch out for your HP as you face numerous enemies...
