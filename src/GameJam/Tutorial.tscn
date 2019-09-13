@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Backgrounds/MainTitle.png" type="Texture" id=2]
+
+[node name="Tutorial" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1.16632, 0 )
+scale = Vector2( 1, 0.936472 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 160.0
+margin_top = 66.0
+margin_right = 624.0
+margin_bottom = 455.0
+text = "All this world is yours to explore. Explore it wisely. Explore it in peace.
+
+As a creature, your goal is to travel in search of a partner. 
+Once you found one, you complete the level.
+Between each level, n - generations will pass, and then,
+the nature will take part in evolving the creatures.
+On the next level you will play as the descendent of that 
+player character and the chosen partner.
+There are different possibilities of partner, each granting a specific
+power to your descendents.
+
+This game is still under development!
+
+Controls 
+Arrows:  Movement
+Tab: Main Attack (When possible)
+
+Create by: PirateKaiju"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 347.513
+margin_top = 509.398
+margin_right = 430.513
+margin_bottom = 529.398
+text = "Main Menu"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://GameWon.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Backgrounds/GameOver.png" type="Texture" id=2]
+
+[node name="GameWon" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.958435, -6.24252 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 220.889
+margin_top = 206.515
+margin_right = 715.889
+margin_bottom = 248.515
+text = "YOU WON THE GAME (this version, actually...). CONGRATULATIONS!"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 368.272
+margin_top = 333.111
+margin_right = 451.272
+margin_bottom = 353.111
+text = "Main Menu"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

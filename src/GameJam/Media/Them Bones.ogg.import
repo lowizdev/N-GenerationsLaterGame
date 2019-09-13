@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Them Bones.ogg-b169d0b71d7df54b91e7fdfbce5a2342.oggstr"
+
+[deps]
+
+source_file="res://Media/Them Bones.ogg"
+dest_files=[ "res://.import/Them Bones.ogg-b169d0b71d7df54b91e7fdfbce5a2342.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Do The Evolution.ogg-39a13c4d85c179c6d4c53dfbe10a4600.oggstr"
+
+[deps]
+
+source_file="res://Media/Do The Evolution.ogg"
+dest_files=[ "res://.import/Do The Evolution.ogg-39a13c4d85c179c6d4c53dfbe10a4600.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

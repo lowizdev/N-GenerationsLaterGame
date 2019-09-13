@@ -1,0 +1,2 @@
+Instalacao: Utilize o executável dentro da pasta específica do SO em questao.
+O Jogo necessita dos arquivos .pkg e .cfg, favor nao remover.

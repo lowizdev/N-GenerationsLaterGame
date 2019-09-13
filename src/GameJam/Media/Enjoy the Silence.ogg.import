@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Enjoy the Silence.ogg-a5e64bc884892e7b1051f0877b6b4894.oggstr"
+
+[deps]
+
+source_file="res://Media/Enjoy the Silence.ogg"
+dest_files=[ "res://.import/Enjoy the Silence.ogg-a5e64bc884892e7b1051f0877b6b4894.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

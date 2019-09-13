@@ -1,0 +1,63 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Player1.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Player/MainChar/CHar1Stand1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Player/MainChar/CHar1Stand2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Player/MainChar/Char1Standttt1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/MainChar/Char1Standttt2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Player/MainChar/Char1Standttt3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Player/MainChar/Char1Standttt4.png" type="Texture" id=7]
+[ext_resource path="res://ScreenShake.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Healthbar.tscn" type="PackedScene" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Run",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+custom_solver_bias = 0.227
+extents = Vector2( 8, 14 )
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -1.52588e-05 )
+frames = SubResource( 1 )
+animation = "Run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="ScreenShake" parent="Camera2D" instance=ExtResource( 8 )]
+
+[node name="Healthbar" parent="Camera2D" instance=ExtResource( 9 )]
+margin_left = -18.7669
+margin_top = -33.2281
+margin_right = 109.233
+margin_bottom = -1.22806
+rect_scale = Vector2( 0.3, 0.2 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 10.7296, 0 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,160 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://World3.gd" type="Script" id=1]
+[ext_resource path="res://Level1Tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Level1TilesetObjects.tres" type="TileSet" id=3]
+[ext_resource path="res://Level1TilesetP2.tres" type="TileSet" id=4]
+[ext_resource path="res://Trap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemy1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemy2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemy3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sprites/Backgrounds/Background2.png" type="Texture" id=9]
+[ext_resource path="res://Media/Them Bones.ogg" type="AudioStream" id=10]
+[ext_resource path="res://NPC1.gd" type="Script" id=11]
+[ext_resource path="res://Sprites/Partner/NPC1Stand1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Partner/NPC1Stand2.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="World3" type="Node"]
+script = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131070, 4, 0, 131071, 3, 0, 65536, 6, 0, 65537, 7, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 3, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 3, 0, 65547, 3, 0, 65548, 3, 0, 65549, 3, 0, 65550, 3, 0, 65551, 2, 0, 65557, 5, 0, 65558, 3, 0, 65559, 2, 0, 131088, 4, 0, 131089, 3, 0, 131090, 3, 0, 131091, 3, 0, 131092, 3, 0, 131093, 2, 0, 262138, 4, 0, 262139, 3, 0, 262140, 3, 0, 262141, 3, 0, 262142, 3, 0, 262143, 2, 0, 327704, 4, 0, 327705, 3, 0, 327706, 3, 0, 327707, 3, 0, 327708, 3, 0, 327709, 3, 0, 327710, 3, 0, 327711, 3, 0, 327712, 3, 0, 327713, 2, 0, 458863, 4, 0, 458864, 3, 0, 458865, 3, 0, 458866, 3, 0, 458867, 3, 0, 458868, 3, 0, 458869, 3, 0, 458870, 3, 0, 458871, 3, 0, 458872, 3, 0, 458873, 3, 0, 458874, 3, 0, 458875, 3, 0, 458876, 3, 0, 458877, 3, 0, 458878, 2, 0, 524322, 4, 0, 524323, 3, 0, 524324, 3, 0, 524325, 3, 0, 524326, 3, 0, 524327, 3, 0, 524328, 3, 0, 524329, 3, 0, 524330, 3, 0, 524331, 3, 0, 524332, 3, 0, 524333, 3, 0, 524334, 3, 0, 524335, 3, 0, 524336, 3, 0, 524337, 2, 0, 524340, 4, 0, 524341, 3, 0, 524342, 3, 0, 524343, 3, 0, 524344, 3, 0, 524345, 3, 0, 524346, 2, 0, 524351, 4, 0, 524352, 3, 0, 524353, 3, 0, 524354, 3, 0, 524355, 3, 0, 524356, 3, 0, 524357, 3, 0, 524358, 3, 0, 524359, 3, 0, 524360, 3, 0, 524361, 3, 0, 524362, 2, 0, 524415, 4, 0, 524416, 3, 0, 524417, 3, 0, 524418, 3, 0, 524419, 3, 0, 524420, 3, 0, 524421, 6, 0, 524422, 8, 0, 524423, 8, 0, 524424, 9, 0, 589901, 4, 0, 589902, 2, 0, 589932, 4, 0, 589933, 2, 0, 655410, 4, 0, 655411, 2, 0, 655419, 4, 0, 655420, 3, 0, 655421, 3, 0, 655422, 2, 0, 786536, 4, 0, 786537, 2, 0, 852043, 4, 0, 852044, 3, 0, 852045, 3, 0, 852046, 3, 0, 852047, 2, 0, 917584, 4, 0, 917585, 2, 0, 917612, 4, 0, 917613, 2, 0, 983122, 4, 0, 983123, 2, 0, 1048660, 4, 0, 1048661, 2, 0, 1048681, 4, 0, 1048682, 2, 0, 1114198, 4, 0, 1114199, 2, 0, 1179736, 4, 0, 1179737, 2, 0, 1245274, 4, 0, 1245275, 3, 0, 1245276, 3, 0, 1245277, 3, 0, 1245278, 3, 0, 1245279, 3, 0, 1245280, 3, 0, 1245281, 3, 0, 1245282, 3, 0, 1245283, 3, 0, 1245284, 3, 0, 1245285, 3, 0, 1245286, 3, 0, 1245287, 3, 0, 1245288, 3, 0, 1245289, 3, 0, 1245290, 3, 0, 1245291, 3, 0, 1245292, 3, 0, 1245293, 3, 0, 1245294, 2, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 196606, 3, 0, 131087, 2, 0, 131095, 2, 0, 196624, 1, 0, 196629, 2, 0, 196631, 2, 0, 262165, 2, 0, 262167, 2, 0, 327701, 2, 0, 327703, 2, 0, 393249, 2, 0, 458785, 2, 0, 524321, 2, 0, 524399, 1, 0, 589873, 2, 0, 589876, 3, 0, 589882, 2, 0, 589887, 3, 0, 589898, 2, 0, 589935, 1, 0, 655409, 2, 0, 655412, 3, 0, 655418, 2, 0, 655423, 3, 0, 655434, 2, 0, 655471, 1, 0, 720970, 2, 0, 721007, 1, 0, 786506, 2, 0, 786543, 1, 0, 852042, 2, 0, 852079, 1, 0, 917615, 1, 0, 983151, 1, 0, 1048687, 1, 0, 1114223, 1, 0, 1179759, 1, 0, 1245295, 1, 0 )
+
+[node name="TileMap3" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -262151, 9, 0, -196615, 9, 0, -131079, 9, 0, -65543, 9, 0, -7, 9, 0, 65529, 9, 0, 137, 9, 0, 131065, 9, 0, 65673, 9, 0, 196601, 9, 0, 131209, 9, 0, 262137, 9, 0, 196745, 9, 0, 327673, 9, 0, 262281, 9, 0, 393209, 9, 0, 327817, 9, 0, 458745, 9, 0, 393353, 9, 0, 524281, 9, 0, 458889, 9, 0, 589817, 9, 0, 524425, 9, 0, 655353, 9, 0, 589961, 9, 0, 720889, 9, 0, 655497, 9, 0, 786425, 9, 0, 721033, 9, 0, 851961, 9, 0, 786569, 9, 0, 917497, 9, 0, 852105, 9, 0, 983033, 9, 0, 917641, 9, 0, 1048569, 9, 0, 983177, 9, 0, 1114105, 9, 0, 1048713, 9, 0, 1179641, 9, 0, 1114249, 9, 0, 1245177, 9, 0, 1179785, 9, 0, 1310713, 9, 0, 1245321, 9, 0, 1376249, 9, 0, 1310857, 9, 0, 1441785, 9, 0, 1376393, 9, 0, 1507321, 9, 0, 1441929, 9, 0, 1572857, 9, 0, 1507465, 9, 0, 1638393, 9, 0, 1573001, 9, 0, 1573002, 9, 0, 1703929, 9, 0, 1638537, 9, 0, 1638538, 9, 0, 1769465, 9, 0, 1704073, 9, 0, 1704074, 9, 0, 1835001, 9, 0, 1769609, 9, 0, 1900537, 9, 0, 1835145, 9, 0, 1966073, 9, 0, 1900681, 9, 0, 2031609, 9, 0, 1966217, 9, 0, 2097145, 9, 0, 2031753, 9, 0, 2162681, 9, 0, 2097234, 9, 0, 2097235, 9, 0, 2097236, 9, 0, 2097237, 9, 0, 2097238, 9, 0, 2097239, 9, 0, 2097289, 9, 0, 2228217, 9, 0, 2228218, 9, 0, 2228219, 9, 0, 2228220, 9, 0, 2228221, 9, 0, 2228222, 9, 0, 2228223, 9, 0, 2162688, 9, 0, 2162689, 9, 0, 2162690, 9, 0, 2162691, 9, 0, 2162692, 9, 0, 2162693, 9, 0, 2162694, 9, 0, 2162695, 9, 0, 2162696, 9, 0, 2162697, 9, 0, 2162698, 9, 0, 2162699, 9, 0, 2162700, 9, 0, 2162701, 9, 0, 2162702, 9, 0, 2162703, 9, 0, 2162704, 9, 0, 2162705, 9, 0, 2162706, 9, 0, 2162707, 9, 0, 2162708, 9, 0, 2162709, 9, 0, 2162710, 9, 0, 2162711, 9, 0, 2162712, 9, 0, 2162713, 9, 0, 2162714, 9, 0, 2162715, 9, 0, 2162716, 9, 0, 2162717, 9, 0, 2162718, 9, 0, 2162719, 9, 0, 2162720, 9, 0, 2162721, 9, 0, 2162722, 9, 0, 2162723, 9, 0, 2162724, 9, 0, 2162725, 9, 0, 2162726, 9, 0, 2162727, 9, 0, 2162728, 9, 0, 2162729, 9, 0, 2162730, 9, 0, 2162731, 9, 0, 2162732, 9, 0, 2162733, 9, 0, 2162734, 9, 0, 2162735, 9, 0, 2162736, 9, 0, 2162737, 9, 0, 2162738, 9, 0, 2162739, 9, 0, 2162740, 9, 0, 2162741, 9, 0, 2162742, 9, 0, 2162743, 9, 0, 2162744, 9, 0, 2162745, 9, 0, 2162746, 9, 0, 2162747, 9, 0, 2162767, 9, 0, 2162768, 9, 0, 2162769, 9, 0, 2162776, 9, 0, 2162777, 9, 0, 2162778, 9, 0, 2162779, 9, 0, 2162825, 9, 0, 2228284, 9, 0, 2228285, 9, 0, 2228286, 9, 0, 2228287, 9, 0, 2228288, 9, 0, 2228289, 9, 0, 2228290, 9, 0, 2228291, 9, 0, 2228292, 9, 0, 2228293, 9, 0, 2228294, 9, 0, 2228295, 9, 0, 2228296, 9, 0, 2228297, 9, 0, 2228298, 9, 0, 2228299, 9, 0, 2228300, 9, 0, 2228301, 9, 0, 2228302, 9, 0, 2228316, 9, 0, 2228317, 9, 0, 2228318, 9, 0, 2228319, 9, 0, 2228320, 9, 0, 2228321, 9, 0, 2228322, 9, 0, 2228323, 9, 0, 2228324, 9, 0, 2228325, 9, 0, 2228326, 9, 0, 2228327, 9, 0, 2228328, 9, 0, 2228329, 9, 0, 2228330, 9, 0, 2228331, 9, 0, 2228332, 9, 0, 2228333, 9, 0, 2228334, 9, 0, 2228335, 9, 0, 2228356, 9, 0, 2228357, 9, 0, 2228358, 9, 0, 2228359, 9, 0, 2228360, 9, 0, 2228361, 9, 0, 2293872, 9, 0, 2293873, 9, 0, 2293874, 9, 0, 2293875, 9, 0, 2293876, 9, 0, 2293877, 9, 0, 2293878, 9, 0, 2293879, 9, 0, 2293880, 9, 0, 2293881, 9, 0, 2293882, 9, 0, 2293883, 9, 0, 2293884, 9, 0, 2293885, 9, 0, 2293886, 9, 0, 2293887, 9, 0, 2293888, 9, 0, 2293889, 9, 0, 2293890, 9, 0, 2293891, 9, 0, 2293897, 9, 0, 2293898, 9, 0, 2293899, 9, 0, 2293900, 9, 0, 2293901, 9, 0, 2293902, 9, 0, 2293903, 9, 0, 2293904, 9, 0, 2293905, 9, 0, 2293906, 9, 0, 2293907, 9, 0, 2293908, 9, 0, 2293909, 9, 0, 2293910, 9, 0, 2293911, 9, 0, 2293912, 9, 0, 2359433, 9, 0 )
+
+[node name="Trap" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3485.15, 592.396 )
+
+[node name="Trap2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3526.2, 592.396 )
+
+[node name="Trap3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3440.94, 591.343 )
+
+[node name="Trap4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3407.25, 591.343 )
+
+[node name="Trap5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3373.57, 591.343 )
+
+[node name="Trap6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1997.41, 303.103 )
+
+[node name="Trap7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1967.41, 303.103 )
+
+[node name="Trap8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1936.41, 303.103 )
+
+[node name="Trap9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1904.41, 303.103 )
+
+[node name="Trap10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1618.41, 303.103 )
+
+[node name="Trap11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1649.96, 303.33 )
+
+[node name="Trap12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 784.822, 143.945 )
+
+[node name="Trap13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 655.853, 47.4756 )
+
+[node name="Trap14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 624.128, 48.2494 )
+
+[node name="Trap15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 590.856, 48.2494 )
+
+[node name="Trap16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 559.131, 48.2494 )
+
+[node name="Trap17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 526.977, 47.5794 )
+
+[node name="Enemy1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 816.699, 147.818 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2472.17, 275.391 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1682.55, 244.561 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 242.573, 20.4308 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 188.646, 19.4398 )
+
+[node name="Enemy9" parent="." instance=ExtResource( 7 )]
+position = Vector2( -83.3533, 84.4397 )
+
+[node name="Enemy10" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1321.17, 243.175 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3409.49, 324.446 )
+
+[node name="Enemy7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3433.34, 483.448 )
+
+[node name="Enemy8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2667.49, 398.647 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.5, 0.5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 800, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 9 )
+offset = Vector2( 0, -250 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+max_distance = 10000.0
+attenuation = 0.00340059
+
+[node name="NPC1" type="Area2D" parent="."]
+position = Vector2( 4326.67, 241.204 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="NPC1"]
+frames = SubResource( 1 )
+animation = "Idle"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC1"]
+position = Vector2( -1.76051, 0.440125 )
+shape = SubResource( 2 )
