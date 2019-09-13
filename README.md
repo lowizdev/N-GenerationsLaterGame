@@ -1,6 +1,6 @@
 <h1>N-Generations Later</h1>
 
-**First place award winning game at the event "GameJam 2019 - IF Rio Pomba", following the theme "Evolution".**
+**First place award winning game at the event "Game Jam 2019 - IF Rio Pomba", following the theme "Evolution".**
 
 ---
 
