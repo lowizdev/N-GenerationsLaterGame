@@ -20,7 +20,7 @@ This game was made using the Godot Engine. Support them when possible!
 
 This version of the game is completely free! Enjoy it! Also, the game resources are available to you in the src/ folder. The sprites and original pixel arts are included.
 
-The sfx used in this game is available publicly. All the rights to it's respective owners.
+The sfx used in this game is available publicly. All the rights to its respective owners.
 
 ---
 
